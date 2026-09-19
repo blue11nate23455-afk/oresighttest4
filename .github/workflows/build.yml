@@ -1,0 +1,39 @@
+name: Build OreSight Mod
+
+# Runs automatically whenever you push to main, and can also be triggered
+# manually from the Actions tab ("Run workflow" button). GitHub's runners
+# have full internet access, so they can download Minecraft, Fabric Loader,
+# Fabric API, and Yarn mappings without any of the restrictions a local
+# sandboxed build environment might have.
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.10'
+
+      - name: Build mod jar
+        run: gradle build --stacktrace
+
+      - name: Upload built jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: oresight-jar
+          path: build/libs/*.jar
+          if-no-files-found: error
