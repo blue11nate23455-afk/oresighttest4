@@ -1,0 +1,20 @@
+accessWidener v2 named
+
+# These entries open up just enough of Minecraft's internal rendering
+# classes to build a custom RenderLayer whose depth-test phase is
+# "always pass" -- which is what lets a highlighted block be drawn
+# through terrain instead of behind it.
+#
+# NOTE: field/method names inside RenderLayer / RenderPhase occasionally
+# get renamed between Minecraft versions as Mojang/Yarn tweak the
+# rendering internals. If the build fails on RenderLayers.java pointing
+# at one of the lines below, use your IDE's "Generate Sources" Gradle
+# task (Fabric Loom adds it) to open the *actual* decompiled class for
+# your exact 1.21.11 build, find the renamed field/method, and update
+# both this file and RenderLayers.java to match. See README section
+# "If the render layer doesn't compile".
+
+accessible class net/minecraft/client/render/RenderLayer$MultiPhaseParameters
+accessible class net/minecraft/client/render/RenderLayer$MultiPhaseParameters$Builder
+accessible method net/minecraft/client/render/RenderLayer of (Ljava/lang/String;Lnet/minecraft/client/render/VertexFormat;Lnet/minecraft/client/render/VertexFormat$DrawMode;IZZLnet/minecraft/client/render/RenderLayer$MultiPhaseParameters;)Lnet/minecraft/client/render/RenderLayer;
+accessible field net/minecraft/client/render/RenderPhase$DepthTest ALWAYS_DEPTH_TEST Lnet/minecraft/client/render/RenderPhase$DepthTest;

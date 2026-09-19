@@ -1,0 +1,48 @@
+{
+  "category.oresight.general": "OreSight",
+  "key.oresight.toggle": "Toggle Block Highlighting",
+  "key.oresight.menu": "Open OreSight Menu",
+  "key.oresight.hide": "Hold to Temporarily Hide Highlights",
+
+  "oresight.title": "OreSight Settings",
+  "oresight.tab.general": "General",
+  "oresight.tab.blocks": "Blocks",
+  "oresight.tab.appearance": "Appearance",
+  "oresight.tab.animation": "Animation",
+  "oresight.tab.profiles": "Profiles",
+
+  "oresight.general.enabled": "Highlighting",
+  "oresight.general.mode": "Mode",
+  "oresight.general.mode.through": "Through Terrain",
+  "oresight.general.mode.visible": "Exposed Blocks Only",
+  "oresight.general.range": "Range",
+  "oresight.general.fade": "Distance Fade",
+  "oresight.general.hud": "HUD Indicator",
+  "oresight.general.blockname": "Show Block Name on Look",
+
+  "oresight.blocks.search": "Search blocks...",
+  "oresight.blocks.enableall": "Enable All",
+  "oresight.blocks.disableall": "Disable All",
+  "oresight.blocks.category": "Category",
+  "oresight.blocks.color": "Color",
+
+  "oresight.appearance.style": "Highlight Style",
+  "oresight.appearance.style.outline": "Outline",
+  "oresight.appearance.style.solid": "Solid",
+  "oresight.appearance.style.glow": "Glow",
+  "oresight.appearance.style.outlineglow": "Outline + Glow",
+  "oresight.appearance.brightness": "Brightness",
+  "oresight.appearance.fillopacity": "Fill Opacity",
+  "oresight.appearance.outlineopacity": "Outline Opacity",
+  "oresight.appearance.outlinethickness": "Outline Thickness",
+  "oresight.appearance.glowintensity": "Glow Intensity",
+
+  "oresight.animation.pulse": "Pulse Effect",
+  "oresight.animation.speed": "Pulse Speed",
+
+  "oresight.profiles.save": "Save As...",
+  "oresight.profiles.load": "Load",
+  "oresight.profiles.reset": "Reset to Defaults",
+
+  "oresight.done": "Done"
+}
